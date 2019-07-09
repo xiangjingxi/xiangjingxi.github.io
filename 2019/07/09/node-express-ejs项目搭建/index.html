@@ -5,18 +5,22 @@
   
 
   
-  <title>项靖稀的小站</title>
+  <title>node+express+ejs项目搭建 | 项靖稀的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web，程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="项靖稀的小站">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="写在前面因为新开了一个hexo博客，所以不由的想要看看，hexo是怎么实现的，然后接着就发现默认的render插件（渲染插件）所用的模板引擎是ejs，所以我们就来看看怎么在后台使用ejs渲染页面。然后，这里我们使用的后台是node+express，不知道的同学可以去看看http://www.expressjs.com.cn/ ，以后有空我们也再讲。 我们直接使用express-generator构">
+<meta name="keywords" content="ejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node+express+ejs项目搭建">
+<meta property="og:url" content="http://yoursite.com/2019/07/09/node-express-ejs项目搭建/index.html">
 <meta property="og:site_name" content="项靖稀的小站">
-<meta property="og:description" content="web，程序员">
+<meta property="og:description" content="写在前面因为新开了一个hexo博客，所以不由的想要看看，hexo是怎么实现的，然后接着就发现默认的render插件（渲染插件）所用的模板引擎是ejs，所以我们就来看看怎么在后台使用ejs渲染页面。然后，这里我们使用的后台是node+express，不知道的同学可以去看看http://www.expressjs.com.cn/ ，以后有空我们也再讲。 我们直接使用express-generator构">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/07/09/node-express-ejs项目搭建/Snipaste_2019-07-09_09-58-26.png">
+<meta property="og:updated_time" content="2019-07-09T03:00:22.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="项靖稀的小站">
-<meta name="twitter:description" content="web，程序员">
+<meta name="twitter:title" content="node+express+ejs项目搭建">
+<meta name="twitter:description" content="写在前面因为新开了一个hexo博客，所以不由的想要看看，hexo是怎么实现的，然后接着就发现默认的render插件（渲染插件）所用的模板引擎是ejs，所以我们就来看看怎么在后台使用ejs渲染页面。然后，这里我们使用的后台是node+express，不知道的同学可以去看看http://www.expressjs.com.cn/ ，以后有空我们也再讲。 我们直接使用express-generator构">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/09/node-express-ejs项目搭建/Snipaste_2019-07-09_09-58-26.png">
   
     <link rel="alternate" href="/atom.xml" title="项靖稀的小站" type="application/atom+xml">
   
@@ -63,9 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-node-express-ejs项目搭建" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-node-express-ejs项目搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/09/node-express-ejs项目搭建/" class="article-date">
   <time datetime="2019-07-09T02:38:08.000Z" itemprop="datePublished">2019-07-09</time>
@@ -78,8 +80,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/09/node-express-ejs项目搭建/">node+express+ejs项目搭建</a>
+    <h1 class="article-title" itemprop="name">
+      node+express+ejs项目搭建
     </h1>
   
 
@@ -116,98 +118,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-开站" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/05/开站/" class="article-date">
-  <time datetime="2019-07-05T07:39:52.000Z" itemprop="datePublished">2019-07-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/05/开站/">开站</a>
-    </h1>
+    <a href="/2019/07/05/开站/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">开站</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>写在前面，这次是我第二次开始写博客，之前在刚刚开始做前端的时候弄过一次，但是当时确实太菜，所以写了两次就不了了之了，这次重新开始，希望自己能够坚持下来！</p>
-<h2 id="重新开始，好好学习，天天向上"><a href="#重新开始，好好学习，天天向上" class="headerlink" title="重新开始，好好学习，天天向上"></a>重新开始，好好学习，天天向上</h2><p>现在做码农也有几年了，越往后越觉得自己欠缺太多，我不是科班出身，基础理论欠的很多，计算机系统，数据结构与算法，计算机网络，操作系统，编译原理等等，这些看似和工作毫无关系的知识，其实非常有用，我觉得，写代码不能知其然不知其所以然！出来混，总是要还的，所以我现在开始，要慢慢的补这一些东西，然后我也会将我所学的东西，记录下来，希望能对自己，也对别人有一点点的帮助！<br>当然，其实现在技术更新换代太快，导致很多人都很焦虑，其实我也是！但是我觉得，越底层的东西，就越难被淘汰，其实我们仔细去看看，很多东西，只是上层API换了而已，其本质并没有变，所以，越是更新快，我们就越应该返回去学那些底层的原理知识，这样，就可以以不变应万变！<br>生命在于运动，人生在于成长，希望我能够，好好学习，天天向上！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/05/开站/" data-id="cjxv7k4210007u0u80p3z7t1g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/04/hello-world/" class="article-date">
-  <time datetime="2019-07-04T15:32:55.598Z" itemprop="datePublished">2019-07-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/04/hello-world/" data-id="cjxv7k41e0000u0u8i4buj71g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
