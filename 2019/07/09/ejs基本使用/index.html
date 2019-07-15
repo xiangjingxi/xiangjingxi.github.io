@@ -5,18 +5,19 @@
   
 
   
-  <title>项靖稀的小站</title>
+  <title>ejs基本使用 | 项靖稀的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web，程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="项靖稀的小站">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="之前我有讲怎么搭建一个express+ejs的项目，现在我来讲讲ejs的基本用法。 安装引入利用 NPM 安装 EJS 很简单。 1$ npm install ejs  模板字符串和一些数据作为参数传递给 EJS，然后 HTML 就出来了。 123var ejs = require(&apos;ejs&apos;),    people = [&apos;geddy&apos;, &apos;neil&apos;, &apos;alex&apos;],    html = e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ejs基本使用">
+<meta property="og:url" content="http://yoursite.com/2019/07/09/ejs基本使用/index.html">
 <meta property="og:site_name" content="项靖稀的小站">
-<meta property="og:description" content="web，程序员">
+<meta property="og:description" content="之前我有讲怎么搭建一个express+ejs的项目，现在我来讲讲ejs的基本用法。 安装引入利用 NPM 安装 EJS 很简单。 1$ npm install ejs  模板字符串和一些数据作为参数传递给 EJS，然后 HTML 就出来了。 123var ejs = require(&apos;ejs&apos;),    people = [&apos;geddy&apos;, &apos;neil&apos;, &apos;alex&apos;],    html = e">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-15T03:21:17.660Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="项靖稀的小站">
-<meta name="twitter:description" content="web，程序员">
+<meta name="twitter:title" content="ejs基本使用">
+<meta name="twitter:description" content="之前我有讲怎么搭建一个express+ejs的项目，现在我来讲讲ejs的基本用法。 安装引入利用 NPM 安装 EJS 很简单。 1$ npm install ejs  模板字符串和一些数据作为参数传递给 EJS，然后 HTML 就出来了。 123var ejs = require(&apos;ejs&apos;),    people = [&apos;geddy&apos;, &apos;neil&apos;, &apos;alex&apos;],    html = e">
   
     <link rel="alternate" href="/atom.xml" title="项靖稀的小站" type="application/atom+xml">
   
@@ -63,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ejs基本使用" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ejs基本使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/09/ejs基本使用/" class="article-date">
   <time datetime="2019-07-09T03:19:11.000Z" itemprop="datePublished">2019-07-09</time>
@@ -78,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/09/ejs基本使用/">ejs基本使用</a>
+    <h1 class="article-title" itemprop="name">
+      ejs基本使用
     </h1>
   
 
@@ -146,153 +145,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-node-express-ejs项目搭建" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/09/node-express-ejs项目搭建/" class="article-date">
-  <time datetime="2019-07-09T02:38:08.000Z" itemprop="datePublished">2019-07-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/09/node-express-ejs项目搭建/">node+express+ejs项目搭建</a>
-    </h1>
+    <a href="/2019/07/09/node-express-ejs项目搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">node+express+ejs项目搭建</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>因为新开了一个hexo博客，所以不由的想要看看，hexo是怎么实现的，然后接着就发现默认的render插件（渲染插件）所用的模板引擎是ejs，所以我们就来看看怎么在后台使用ejs渲染页面。<br>然后，这里我们使用的后台是node+express，不知道的同学可以去看看<a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">http://www.expressjs.com.cn/</a> ，以后有空我们也再讲。</p>
-<h2 id="我们直接使用express-generator构建一个express-ejs项目"><a href="#我们直接使用express-generator构建一个express-ejs项目" class="headerlink" title="我们直接使用express-generator构建一个express+ejs项目"></a>我们直接使用express-generator构建一个express+ejs项目</h2><p>express详细的我就讲了，这里我们直接采用Express应用程序生成器（express-generator）<br>我们首先全局安装一下express-generator。通过如下命令即可安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express-generator -g</span><br></pre></td></tr></table></figure>
-
-<p>然后，在执行express （项目文件夹名称） -e：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ express EJS -e</span><br></pre></td></tr></table></figure>
-
-<p>这样项目就建成了，它会自动生成一个项目文件夹，进入项目目录，下载模块，运行，项目就跑起来啦。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> EJS</span><br><span class="line">$ npm install</span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
-
-<p>在浏览器中打开 <a href="http://localhost:3000/" target="_blank" rel="noopener">http://localhost:3000/</a> 网址就可以看到这个应用了。</p>
-<h2 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h2><p>接着我们来看看express-generator生成的项目文件目录：</p>
-<img src="/2019/07/09/node-express-ejs项目搭建/Snipaste_2019-07-09_09-58-26.png" title="图片">
-
-<p>bin: 启动目录 里面包含了一个启动文件 www 默认监听端口是 3000<br>node_modules:  所有的依赖模块<br>public:  所有的前端静态资源  html css image  js<br>routes:  路由文件<br>views: 主要放置 ejs 后端模板文件<br>app.js:  入口文件(主文件) 总路由<br>package.json:  配置文件</p>
-<p>以上就是简单的ejs项目搭建。</p>
-<p>参考文献：<br><a href="https://www.jianshu.com/p/a77b806b0d14" target="_blank" rel="noopener">https://www.jianshu.com/p/a77b806b0d14</a>  express-generator脚手架的使用（简书）<br><a href="http://www.expressjs.com.cn/" target="_blank" rel="noopener">http://www.expressjs.com.cn/</a>  express官方文档<br><a href="https://ejs.bootcss.com/" target="_blank" rel="noopener">https://ejs.bootcss.com/</a>  ejs官方文档</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/09/node-express-ejs项目搭建/" data-id="cjxvkzzv70002mwu8c19316uu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ejs/">ejs</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-开站" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/05/开站/" class="article-date">
-  <time datetime="2019-07-05T07:39:52.000Z" itemprop="datePublished">2019-07-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/05/开站/">开站</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>写在前面，这次是我第二次开始写博客，之前在刚刚开始做前端的时候弄过一次，但是当时确实太菜，所以写了两次就不了了之了，这次重新开始，希望自己能够坚持下来！</p>
-<h2 id="重新开始，好好学习，天天向上"><a href="#重新开始，好好学习，天天向上" class="headerlink" title="重新开始，好好学习，天天向上"></a>重新开始，好好学习，天天向上</h2><p>现在做码农也有几年了，越往后越觉得自己欠缺太多，我不是科班出身，基础理论欠的很多，计算机系统，数据结构与算法，计算机网络，操作系统，编译原理等等，这些看似和工作毫无关系的知识，其实非常有用，我觉得，写代码不能知其然不知其所以然！出来混，总是要还的，所以我现在开始，要慢慢的补这一些东西，然后我也会将我所学的东西，记录下来，希望能对自己，也对别人有一点点的帮助！<br>当然，其实现在技术更新换代太快，导致很多人都很焦虑，其实我也是！但是我觉得，越底层的东西，就越难被淘汰，其实我们仔细去看看，很多东西，只是上层API换了而已，其本质并没有变，所以，越是更新快，我们就越应该返回去学那些底层的原理知识，这样，就可以以不变应万变！<br>生命在于运动，人生在于成长，希望我能够，好好学习，天天向上！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/05/开站/" data-id="cjxvkzzvm0005mwu8bqaddd83" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/04/hello-world/" class="article-date">
-  <time datetime="2019-07-04T15:32:55.598Z" itemprop="datePublished">2019-07-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/04/hello-world/" data-id="cjxvkzzv40001mwu8etx0fjhe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
